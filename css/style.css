@@ -1,1 +1,46 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+}
+body header #logo {
+  display: flex;
+  justify-content: center;
+}
+body header nav #ikon-liste {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  gap: 0.5rem;
+}
+body header nav #nav-liste {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+body header nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+body header nav ul li a {
+  color: black;
+  /*Meningen at de skal ha understrek, se wireframes*/
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+body main article {
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=style.css.map */
