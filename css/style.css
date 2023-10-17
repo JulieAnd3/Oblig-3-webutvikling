@@ -23,6 +23,11 @@ body header nav #ikon-liste {
   justify-content: end;
   gap: 0.5rem;
 }
+body header nav #ikon-liste #sokefelt {
+  display: flex;
+  justify-content: start;
+  justify-items: start;
+}
 body header nav #nav-liste {
   display: flex;
   gap: 2rem;

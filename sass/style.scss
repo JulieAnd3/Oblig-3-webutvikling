@@ -23,6 +23,12 @@ body{
                     list-style: none;
                     justify-content: end;
                     gap: 0.5rem;
+
+                    #sokefelt{
+                        display: flex;
+                        justify-content: start;
+                        justify-items: start;
+                     }
                        
                 }
                 #nav-liste{
