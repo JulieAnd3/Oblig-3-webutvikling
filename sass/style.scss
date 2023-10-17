@@ -9,32 +9,44 @@ body{
     
     .grid-container{
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, auto);
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
     }
         header {
+            grid-area: header;
             #logo{
                 display: flex;
                 justify-content: center;
             }
             nav {
+                display: flex;
+                align-items: baseline;
+                width: 100%;
+                #sokefelt{
+                    display: flex;
+                    text-align: left;
+                    text-decoration: none;
+                    padding: 1rem;
+                    font-size: 30px;
+                    margin-right: auto;
+                    
+                 }
                 #ikon-liste{
                     display: flex;
-                    list-style: none;
+                    text-decoration: none;
                     justify-content: end;
-                    gap: 0.5rem;
+                    gap: 0.5rem; 
+                    padding: 1rem; 
+                        a{
+                            font-size: 30px;
+                        }
 
-                    #sokefelt{
-                        display: flex;
-                        justify-content: start;
-                        justify-items: start;
-                     }
-                       
                 }
                 #nav-liste{
-                    display: flex;
-                    gap: 2rem;
-                    justify-content: space-evenly;}      
+                    display: none;
+                }      
                     ul li{
                         display: inline-block;
                         list-style: none;
@@ -51,10 +63,40 @@ body{
                 }
                }
             
-        main article{
-            align-items: center;
-            justify-content: space-between;
+        main {
+            grid-area: main;
+            article{
+                align-items: center;
+                justify-content: space-between;
         }
-   
+        }
+         footer {
+            grid-area: footer;
+         }
+        
+
+
+}
+
+@media only screen and (min-width: 600px){
+    #grid-container{
+        grid-template-areas: 
+            "header header header"
+            ".main."
+            "footer footer footer";
+        }
+    header{
+        grid-area: header;
+        #logo{
+            display:flex;
+            justify-content: start; /*Hvorfor funker det ikke?*/
+        }
+        nav{
+            #nav-liste{
+                display: flex;
+                gap: 2rem;
+                justify-content: space-evenly;}  
+            } 
+    }
 
 }

@@ -10,28 +10,40 @@ body {
 }
 body .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "header" "main" "footer";
+}
+body header {
+  grid-area: header;
 }
 body header #logo {
   display: flex;
   justify-content: center;
 }
+body header nav {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+body header nav #sokefelt {
+  display: flex;
+  text-align: left;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 30px;
+  margin-right: auto;
+}
 body header nav #ikon-liste {
   display: flex;
-  list-style: none;
+  text-decoration: none;
   justify-content: end;
   gap: 0.5rem;
+  padding: 1rem;
 }
-body header nav #ikon-liste #sokefelt {
-  display: flex;
-  justify-content: start;
-  justify-items: start;
+body header nav #ikon-liste a {
+  font-size: 30px;
 }
 body header nav #nav-liste {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-evenly;
+  display: none;
 }
 body header nav ul li {
   display: inline-block;
@@ -45,7 +57,31 @@ body header nav ul li a {
   align-items: baseline;
   gap: 1rem;
 }
+body main {
+  grid-area: main;
+}
 body main article {
   align-items: center;
   justify-content: space-between;
+}
+body footer {
+  grid-area: footer;
+}
+
+@media only screen and (min-width: 600px) {
+  #grid-container {
+    grid-template-areas: "header header header" ".main." "footer footer footer";
+  }
+  header {
+    grid-area: header;
+  }
+  header #logo {
+    display: flex;
+    justify-content: start; /*Hvorfor funker det ikke?*/
+  }
+  header nav #nav-liste {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=style.css.map */
