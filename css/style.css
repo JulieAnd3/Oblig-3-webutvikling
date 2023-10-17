@@ -67,6 +67,30 @@ body main article {
 body footer {
   grid-area: footer;
 }
+body nav ul {
+  display: flex;
+  justify-content: baseline;
+  justify-content: space-around;
+  font-size: 30px;
+  list-style: none;
+}
+body #sosiale-medier {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  text-decoration: none;
+  justify-content: space-around;
+}
+body #sosiale-medier li {
+  padding: 0.5rem;
+  font-size: 40px;
+}
+body #sosiale-medier p {
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  align-items: end;
+}
 
 @media only screen and (min-width: 600px) {
   #grid-container {
