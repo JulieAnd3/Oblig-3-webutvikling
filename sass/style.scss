@@ -95,11 +95,8 @@ body{
 
                 }
             p{
-                display:flex;
+                display:flex; /*Kan prøve å få den her riktig sted*/
                 text-align: end;
-                justify-content: end; 
-                align-items: end; 
-            }
             }
 
 
@@ -126,4 +123,5 @@ body{
             } 
     }
 
+}
 }

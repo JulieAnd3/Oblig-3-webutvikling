@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -86,24 +87,21 @@ body #sosiale-medier li {
   font-size: 40px;
 }
 body #sosiale-medier p {
-  display: flex;
+  display: flex; /*Kan prøve å få den her riktig sted*/
   text-align: end;
-  justify-content: end;
-  align-items: end;
 }
-
 @media only screen and (min-width: 600px) {
-  #grid-container {
+  body #grid-container {
     grid-template-areas: "header header header" ".main." "footer footer footer";
   }
-  header {
+  body header {
     grid-area: header;
   }
-  header #logo {
+  body header #logo {
     display: flex;
     justify-content: start; /*Hvorfor funker det ikke?*/
   }
-  header nav #nav-liste {
+  body header nav #nav-liste {
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;
