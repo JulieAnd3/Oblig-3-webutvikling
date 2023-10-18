@@ -1,3 +1,5 @@
+$base-color: rgba(250, 155, 12, 0.4);
+
 *{
     box-sizing: border-box;
 }
@@ -65,9 +67,36 @@ body{
             
         main {
             grid-area: main;
-            article{
-                align-items: center;
-                justify-content: space-between;
+            section{
+                #host-k{
+                    border-radius: 5px;
+                    border: 2px solid #000;
+                    background-color:$base-color;
+                    /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+                    padding: 0.5rem;
+                    font-size: 25px;
+                    width: 50%;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    justify-content: space-evenly;
+                }
+            .produkt-bokser{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                img{
+                    width: 25%;
+                    background-color:$base-color;
+
+                }
+                p{
+                    background-color:$base-color;
+                }
+            }
+            }
+            
         }
         }
          footer {
@@ -78,7 +107,7 @@ body{
                     display:flex;
                     justify-content: baseline;
                     justify-content: space-around;
-                    font-size: 30px;
+                    font-size: 20px;
                     list-style: none;
                 }
             }
@@ -98,6 +127,66 @@ body{
                 display:flex; /*Kan prøve å få den her riktig sted*/
                 text-align: end;
             }
+
+
+}
+
+
+#main-f-og-r{ /*Må ta en god runde med for drit ting ikke vil flytte seg til høyre*/
+    grid-area: main;
+    h2{
+        display:flex;
+        text-align: center;
+
+    }
+    #sjekk-best{
+        border-radius: 5px;
+        background-color:#fff;
+        h3{
+            font-size: 30px;
+        }
+        label{
+            padding:0.4rem;
+            input{
+                width:100%;
+                padding:1rem;
+                font-size: 19px;
+                margin: 0.4rem;
+            }
+        }
+    }
+    #frakt-info{
+        margin: 0.5rem;
+        .post-bring{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            max-width:25%;
+            padding: 0.5rem;
+
+        }
+    }
+    #retur-info{
+        margin:0.5rem;
+    }
+    #retur-btn{
+        display: inline;
+        border-radius: 5px;
+        border: 2px solid #000;
+        background-color:rgba(250, 155, 12, 0.4);
+        /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+        padding: 0.6rem;
+        font-size: 20px;
+        text-decoration: none;
+
+    }
+    #les-mer{
+        display:flex;
+        text-align: right;
+        font-size: 12px;
+        
+    }
 
 
 }
@@ -123,5 +212,4 @@ body{
             } 
     }
 
-}
 }

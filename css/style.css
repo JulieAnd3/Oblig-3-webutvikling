@@ -61,47 +61,125 @@ body header nav ul li a {
 body main {
   grid-area: main;
 }
-body main article {
-  align-items: center;
-  justify-content: space-between;
+body main section #host-k {
+  border-radius: 5px;
+  border: 2px solid #000;
+  background-color: rgba(250, 155, 12, 0.4);
+  /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+  padding: 0.5rem;
+  font-size: 25px;
+  width: 50%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
 }
-body footer {
+body main section .produkt-bokser {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body main section .produkt-bokser img {
+  width: 25%;
+  background-color: rgba(250, 155, 12, 0.4);
+}
+body main section .produkt-bokser p {
+  background-color: rgba(250, 155, 12, 0.4);
+}
+
+footer {
   grid-area: footer;
 }
-body nav ul {
+
+nav ul {
   display: flex;
   justify-content: baseline;
   justify-content: space-around;
-  font-size: 30px;
+  font-size: 20px;
   list-style: none;
 }
-body #sosiale-medier {
+
+#sosiale-medier {
   display: flex;
   list-style: none;
   align-items: baseline;
   text-decoration: none;
   justify-content: space-around;
 }
-body #sosiale-medier li {
+#sosiale-medier li {
   padding: 0.5rem;
   font-size: 40px;
 }
-body #sosiale-medier p {
+#sosiale-medier p {
   display: flex; /*Kan prøve å få den her riktig sted*/
   text-align: end;
 }
+
+#main-f-og-r { /*Må ta en god runde med for drit ting ikke vil flytte seg til høyre*/
+  grid-area: main;
+}
+#main-f-og-r h2 {
+  display: flex;
+  text-align: center;
+}
+#main-f-og-r #sjekk-best {
+  border-radius: 5px;
+  background-color: #fff;
+}
+#main-f-og-r #sjekk-best h3 {
+  font-size: 30px;
+}
+#main-f-og-r #sjekk-best label {
+  padding: 0.4rem;
+}
+#main-f-og-r #sjekk-best label input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 19px;
+  margin: 0.4rem;
+}
+#main-f-og-r #frakt-info {
+  margin: 0.5rem;
+}
+#main-f-og-r #frakt-info .post-bring {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  max-width: 25%;
+  padding: 0.5rem;
+}
+#main-f-og-r #retur-info {
+  margin: 0.5rem;
+}
+#main-f-og-r #retur-btn {
+  display: inline;
+  border-radius: 5px;
+  border: 2px solid #000;
+  background-color: rgba(250, 155, 12, 0.4);
+  /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+  padding: 0.6rem;
+  font-size: 20px;
+  text-decoration: none;
+}
+#main-f-og-r #les-mer {
+  display: flex;
+  text-align: right;
+  font-size: 12px;
+}
+
 @media only screen and (min-width: 600px) {
-  body #grid-container {
+  #grid-container {
     grid-template-areas: "header header header" ".main." "footer footer footer";
   }
-  body header {
+  header {
     grid-area: header;
   }
-  body header #logo {
+  header #logo {
     display: flex;
     justify-content: start; /*Hvorfor funker det ikke?*/
   }
-  body header nav #nav-liste {
+  header nav #nav-liste {
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;

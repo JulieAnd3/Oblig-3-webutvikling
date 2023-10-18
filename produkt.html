@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewprot" content="width=device-width inital-scale=1.0">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
     <title>Produkt</title>
 </head>
-<body class="produkt">
-    <div class="produkt">
+<body>
+    <div class="grid-container" id="index">
     <header>
         <span id="logo">
             <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
         </span>
         <nav>
-            <ul id="ikon-liste">
-                <li><a href="#" id="sokefelt"><img src="img/🦆 icon _magnifying glass_.png" alt="Søkefelt"></a></li>
-                <!--Må finne ut om søkefeltet skal fungere eller ikke-->
-                <li><a href="f-og-r.html" id="lastebil"><img src="img/🦆 icon _shipping_.png" alt="lastebil ikon"></li>
-                <li><a href="#" id="bruker"><img src="img/Vector.png" alt="bruker ikon"></a></li>
-                <li><a href="#" id="fav"><img src="img/🦆 icon _heart_.png" alt="favoritter"></a></li>
-                <li><a href="#" id="handlekurv"><img src="img/🦆 icon _cart_.png" alt="handlekurv ikon"></a></li>
-            <!--Alle bildene på denne listen er tatt fra Open Iconic icon Set av Iconduck på Figma-->
-            </ul>
+            <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <span id="ikon-liste"> 
+                <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i>
+                <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
+                <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
+                <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
+            <!--Alle ikonene er fra Fontawsome-->
+            </span>
             <ul id="nav-liste">
                 <li><a href="#">Nyheter</a></li>
                 <li><a href="produkt.html">Ridestøvler</a></li>
@@ -32,7 +34,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-prod">
         <nav>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
@@ -70,15 +72,12 @@
                 <li><a href="#">FAQ</a></li>
             </ul>
         </nav>
-        <ul>
-            <li><img src="img/instagram-foot.jpg" alt="instagram"></li>
-            <!--<a href="https://pixa>bay.com/no/users/tumisu-148124/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1581266">Tumisu</a> fra <a href="https://pixabay.com/no//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1581266">Pixabay</a>-->
-            <li><img src="img/facebook-foot.png" alt="facebook"></li>
-            <!--<a href=https://www.facebook.com/images/fb_icon_325x325.png>Facebook</a>-->
-            <li><img src="img/pintrest-foot.jpg" alt="pintrest"></li>
-            <!--<a href=https://i.pinimg.com/280x280_RS/f6/e9/3a/f6e93a06b500b2d87ffd32e1f56f7c6f.jpg>Pinrest</a>-->
-            <li><img src="img/tiktok-foot.jpg" alt="tiktok"></li>
-            <!--<a href=https://www.investopedia.com/thmb/vE2Lmd5C8dUW_7G75XDyKzQDc6A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tiktok-b003064e1dfa4459bd31c37e7db390a1.jpg>tiktok</a>-->
+        <ul id="sosiale-medier">
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-pinterest"></i></li>
+            <li><i class="fa-brands fa-tiktok"></i></li>
+            <!--Alle ikonene er fra Fontawsome-->
         </ul>
     <p>©Skohesten 2023</p>
     </footer>
