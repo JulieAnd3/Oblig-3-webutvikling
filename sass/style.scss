@@ -81,19 +81,41 @@ body{
                     justify-content: center;
                     justify-content: space-evenly;
                 }
+                #host-k-tekst{
+                    border-radius: 5px;
+                    border: 2px solid #000;
+                    background-color:$base-color;
+                    /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+                    padding: 0.5rem;
+                    margin: 2rem;
+                    font-size: 25px;
+                    width: 50%;
+                    text-decoration: none;
+                    display: flex;
+                    text-align:center;
+                    align-items: center;
+
+                    .free{
+                        margin: 2rem;
+
+                    }
+
+                }
             .produkt-bokser{
                 display: flex;
-                justify-content: center;
                 flex-wrap: wrap;
-
+                flex-direction: column;
                 img{
                     width: 25%;
                     background-color:$base-color;
+                }
+                .fa-regular{
+                    color: $base-color;
+                    border: 2px solid #000; /*Finne ut hvordan jeg får kanten rundt bare hjertet*/
+                    text-decoration: none;
+                    justify-content: right;
+                }
 
-                }
-                p{
-                    background-color:$base-color;
-                }
             }
             }
             
