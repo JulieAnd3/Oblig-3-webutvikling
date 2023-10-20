@@ -68,18 +68,25 @@ body{
         main {
             grid-area: main;
             section{
+                article{
+                    display:flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    position: static;
+                }
                 #host-k{
                     border-radius: 5px;
                     border: 2px solid #000;
-                    background-color:$base-color;
+                    background-color:#E3C9A1;
                     /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
                     padding: 0.5rem;
                     font-size: 25px;
-                    width: 50%;
+                    height: fit-content;
                     text-decoration: none;
                     display: flex;
-                    justify-content: center;
-                    justify-content: space-evenly;
+                    position:absolute;
+                    width: 56%;
+                    bottom: -100px;
                 }
                 #host-k-tekst{
                     border-radius: 5px;
@@ -88,15 +95,15 @@ body{
                     /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
                     padding: 0.5rem;
                     margin: 2rem;
-                    font-size: 25px;
                     width: 50%;
+                    font-size: 25px;
                     text-decoration: none;
                     display: flex;
                     text-align:center;
                     align-items: center;
 
                     .free{
-                        margin: 2rem;
+                        margin: 3rem;
 
                     }
 
@@ -163,6 +170,7 @@ body{
     }
     #sjekk-best{
         border-radius: 5px;
+        border: 2px #000;
         background-color:#fff;
         h3{
             font-size: 30px;
@@ -179,6 +187,9 @@ body{
     }
     #frakt-info{
         margin: 0.5rem;
+        border-style: solid;
+        padding: 0.4rem;
+        text-align: center;
         .post-bring{
             display: flex;
             flex-direction: row;
@@ -191,6 +202,9 @@ body{
     }
     #retur-info{
         margin:0.5rem;
+        border-style: solid;
+        padding: 0.4rem;
+        text-align: center;
     }
     #retur-btn{
         display: inline;
