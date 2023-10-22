@@ -24,6 +24,8 @@ body header nav {
   display: flex;
   align-items: baseline;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: end;
 }
 body header nav #sokefelt {
   display: flex;
@@ -44,7 +46,8 @@ body header nav #ikon-liste a {
   font-size: 30px;
 }
 body header nav #nav-liste {
-  display: none;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 body header nav ul li {
   display: inline-block;
@@ -58,16 +61,17 @@ body header nav ul li a {
   align-items: baseline;
   gap: 1rem;
 }
-body main {
+body main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-area: main;
 }
-body main section article {
+body main #host-k-bilde {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  position: static;
 }
-body main section #host-k {
+body main #host-k-bilde #host-k {
   border-radius: 5px;
   border: 2px solid #000;
   background-color: #E3C9A1;
@@ -82,7 +86,7 @@ body main section #host-k {
   width: 56%;
   bottom: -100px;
 }
-body main section #host-k-tekst {
+body main #host-k-tekst {
   border-radius: 5px;
   border: 2px solid #000;
   background-color: rgba(250, 155, 12, 0.4);
@@ -96,51 +100,114 @@ body main section #host-k-tekst {
   text-align: center;
   align-items: center;
 }
-body main section #host-k-tekst .free {
+body main #host-k-tekst .free {
   margin: 3rem;
 }
-body main section .produkt-bokser {
+body #produktene {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+}
+body #produktene .produkt-bokser {
+  display: flex;
   flex-direction: column;
 }
-body main section .produkt-bokser img {
+body #produktene .produkt-bokser img {
   width: 25%;
   background-color: rgba(250, 155, 12, 0.4);
+  margin: 0.5rem;
 }
-body main section .produkt-bokser .fa-regular {
-  color: rgba(250, 155, 12, 0.4);
-  border: 2px solid #000; /*Finne ut hvordan jeg får kanten rundt bare hjertet*/
-  text-decoration: none;
-  justify-content: right;
+body #produktene .produkt-bokser img {
+  width: 25%;
+  background-color: rgba(250, 155, 12, 0.4);
+  margin: 0.5rem;
+}
+body #produktene .produkt-bokser h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body #produktene .produkt-bokser p {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 footer {
   grid-area: footer;
 }
-
-nav ul {
+footer nav ul {
   display: flex;
-  justify-content: baseline;
   justify-content: space-around;
-  font-size: 20px;
   list-style: none;
 }
-
-#sosiale-medier {
+footer #sosiale-medier {
   display: flex;
   list-style: none;
   align-items: baseline;
   text-decoration: none;
   justify-content: space-around;
 }
-#sosiale-medier li {
+footer #sosiale-medier li {
   padding: 0.5rem;
   font-size: 40px;
 }
-#sosiale-medier p {
-  display: flex; /*Kan prøve å få den her riktig sted*/
-  text-align: end;
+footer #copyright {
+  display: flex; /*Hvorfor vil ikke denne drit greia funke??? Hvorfor er den på diplay: block*/
+  justify-content: end;
+  margin: 0.5rem;
+}
+
+#main-prod section h3 {
+  font-size: 32px;
+}
+#main-prod section #prod-bilde {
+  order: -1;
+}
+#main-prod #prod-kat {
+  min-width: 85%;
+  font-size: 30px;
+}
+#main-prod #prod-kat #stjerner {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: end;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+#main-prod #prod-kat #stjerner p {
+  font-size: 24px;
+}
+#main-prod #prod-kat #stjerner a {
+  font-size: 24px;
+  flex-direction: column;
+}
+#main-prod #prod-kat .kategori-knapp {
+  border: solid;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+#main-prod #prod-kat #legg-handlekruv {
+  border: solid;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: rgba(250, 155, 12, 0.4);
+}
+#main-prod #prod-kat #legg-handlekruv a {
+  text-decoration: none;
+}
+#main-prod #prod-kat #storrelseguide {
+  border: solid;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #main-f-og-r { /*Må ta en god runde med for drit ting ikke vil flytte seg til høyre*/
@@ -197,15 +264,18 @@ nav ul {
   font-size: 20px;
   text-decoration: none;
 }
-#main-f-og-r #les-mer {
+#main-f-og-r .les-mer {
   display: flex;
   text-align: right;
   font-size: 12px;
+  justify-content: end;
+  flex-direction: column;
+  margin: 0.5rem;
 }
 
 @media only screen and (min-width: 600px) {
   #grid-container {
-    grid-template-areas: "header header header" ".main." "footer footer footer";
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
   }
   header {
     grid-area: header;
@@ -216,7 +286,10 @@ nav ul {
   }
   header nav #nav-liste {
     display: flex;
-    gap: 2rem;
-    justify-content: space-evenly;
+    font-size: 30px;
+  }
+  header nav #nav-liste li {
+    padding: 1rem;
+    margin: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

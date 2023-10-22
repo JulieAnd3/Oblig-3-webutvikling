@@ -11,29 +11,29 @@
 </head>
 <body class="index">
     <div class="grid-container" id="index">
-    <header>
-        <span id="logo">
-           <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
-        </span>
-        <nav>
-            <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <span id="ikon-liste"> 
-                <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i>
-                <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
-                <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
-                <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
-            <!--Alle ikonene er fra Fontawsome-->
+        <header>
+            <span id="logo">
+                <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
             </span>
-            <ul id="nav-liste">
-                <li><a href="#">Nyheter</a></li>
-                <li><a href="produkt.html">Ridestøvler</a></li>
-                <li><a href="produkt.html">Ridesko</a></li>
-                <li><a href="#">Chaps</a></li>
-                <li><a href="#">Stallsko</a></li>
-                <li><a href="#">Skopleie og tilbehør</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav>
+                <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div id="ikon-liste"> 
+                    <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i></a>
+                    <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
+                    <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
+                    <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
+                <!--Alle ikonene er fra Fontawsome-->
+                </div>
+                <ul id="nav-liste">
+                    <li><a href="#">Nyheter</a></li>
+                    <li><a href="produkt.html">Ridestøvler</a></li>
+                    <li><a href="#">Ridesko</a></li>
+                    <li><a href="#">Chaps</a></li>
+                    <li><a href="#">Stallsko</a></li>
+                    <li><a href="#">Skopleie og tilbehør</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <section id="main.section">
             <article id="host-k-bilde">
@@ -44,8 +44,9 @@
             <article id="host-k-tekst">
                 <p>Oppdag den nye høstkolleksjonen <a href="produkt.html" class="free"><img src="img/free.png" alt="Free høstkolleksjon"></a>Laget av kvalitetsmatirale og designet for komfort og opptimal yttelse </p>
             </article>
+        </section>
+        <section id="produktene">
             <article class="produkt-bokser"> <!--Finne ut hvor du skal legge linken-->
-                <a href="#" class="legg-t-fav"><i class="fa-regular fa-heart"></i></a>
                 <!--Ikon fra Fontawsome-->
                 <img src="img/ridesko-kilkenny-jodphur-f.jpg" alt="Ridesko i en stall">
                 <!--<a href=https://www.horze.no/dw/image/v2/AATB_PRD/on/demandware.static/-/Sites-main-catalog/default/dw875dd899/horze/38067_br_08.jpg?sw=535&q=55&filename=horze-kilkenny-jodphur-damemodell-brown.jpg>Ridesko, Kilkenny Jodphur</a>-->
@@ -53,7 +54,6 @@
                 <p>399 kr</p>
             </article>
             <article class="produkt-bokser">
-                <a href="#" class="legg-t-fav"><i class="fa-regular fa-heart"></i></a>
                 <!--Ikon fra Fontawsome-->
                 <img src="img/b-vertigo-comet-knechaps-f.jpg" alt="Chaps over ridesko i en stall">
                 <!--<a href=https://www.horze.no/dw/image/v2/AATB_PRD/on/demandware.static/-/Sites-main-catalog/default/dwf9b4c76d/bvertigo/37298_BL_5.jpg?sw=535&q=55&filename=b-vertigo-comet-knechaps-i-lar-black.jpg>B Vertigo Comet knechaps</a>-->
@@ -61,6 +61,7 @@
                 <p>439 kr</p>
             </article>
         </section>
+        
     </main>
     <footer>
         <nav>
@@ -79,7 +80,7 @@
             <li><i class="fa-brands fa-tiktok"></i></li>
             <!--Alle ikonene er fra Fontawsome-->
         </ul>
-    <p>©Skohesten 2023</p>
+    <p id="copyright">©Skohesten 2023</p>
     </footer>
     </div>
 </body>
